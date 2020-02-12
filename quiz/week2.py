@@ -33,14 +33,13 @@ def prob3():
 
 
 # What is the value of list1 after the following lines are executed?
-def prob4():
-    def mystery(l):
-        l = l[0:5]
-        return ()
 
-    list1 = [44, 71, 12, 8, 23, 17, 16]
-    print(mystery(list1))
+def mystery(l):
+    l = l[0:5]
+    return ()
 
 
 if __name__ == '__main__':
-    pass
+    list1 = [44, 71, 12, 8, 23, 17, 16]
+    mystery(list1)
+    print(list1)
