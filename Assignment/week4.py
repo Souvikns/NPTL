@@ -32,7 +32,7 @@ def orangecap(d: dict):
 
 def addpoly(p1, p2):
     tree = {}
-    z=[]
+    z = []
     for i in range(len(p1)):
         if p1[i][1] in tree:
             pass
@@ -42,15 +42,15 @@ def addpoly(p1, p2):
         if p2[i][1] in tree:
             x = tree[p2[i][1]]
             tree[p2[i][1]] = x + p2[i][0]
-            if tree[p2[i][1]] ==0:
+            if tree[p2[i][1]] == 0:
                 z.append(p2[i][1])
         else:
             tree[p2[i][1]] = p2[i][0]
     for i in z:
         del tree[i]
-    ans=[]
-    for i,j in tree.items():
-        t=(j,i)
+    ans = []
+    for i, j in tree.items():
+        t = (j, i)
         ans.append(t)
     return sorted(ans)
 
@@ -63,5 +63,5 @@ if __name__ == '__main__':
     check = orangecap({'match1': {'player1': 57, 'player2': 38}, 'match2': {'player3': 9, 'player1': 42},
                        'match3': {'player2': 41, 'player4': 63, 'player3': 91}})
     print(check)
-    ans=addpoly([(4, 3), (3, 0)], [(-4, 3), (2, 1)])
+    ans = addpoly([(4, 3), (3, 0)], [(-4, 3), (2, 1)])
     print(ans)
