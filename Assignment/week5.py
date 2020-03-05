@@ -53,6 +53,5 @@ class Prog:
 
 
 if __name__ == '__main__':
-    # testprog()
     prog = Prog()
     prog.ans()
